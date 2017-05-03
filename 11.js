@@ -50,7 +50,6 @@ const data = [
     [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
     [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
 
-let allPosibleSets = [];
 const productOf = (numbers) => {
     return numbers.reduce((prev, cur) => {
         return prev * cur;
@@ -70,7 +69,7 @@ const getAllDirections = (data, row, col) => {
     return result;
 }
 
-
+let allPosibleSets = [];
 for (let row = 0; row < 20; row++) { // row
     for (let col = 0; col < 20; col++) { // col
         allPosibleSets.push(...getAllDirections(data, row, col))
