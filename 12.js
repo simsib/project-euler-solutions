@@ -50,12 +50,11 @@ let num = 1;
 while (500 > result) {
     let triangle = getTriangleNumber(num);
     result = getDivisorsCount(triangle);
-    if (result > 100) {
+    if (result > 500) {
         console.log(`'${num}' triangle number '${triangle}' has ${result}}`);
     }
     num++;
 }
-console.log('done!');
 
 assert.equal(getTriangleNumber(1),1);
 assert.equal(getTriangleNumber(2),3);
