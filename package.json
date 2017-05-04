@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/simsib/project-euler-solutions#readme",
   "devDependencies": {
-    "assert": "^1.4.1"
+    "assert": "^1.4.1",
+    "bignumber.js": "^4.0.2"
   }
 }
