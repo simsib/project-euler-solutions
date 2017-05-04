@@ -13,12 +13,8 @@ const Factorial = (number) => {
 }
 
 const FindLatticePathCount = (gridSize) => {
-    const factorialTimes2 = Factorial(2*gridSize);
-    const factorialProduct = Factorial(gridSize);
-    const factorialSquare = Math.pow(factorialProduct,2)
-    return factorialTimes2 / factorialSquare;
+    return Factorial(2*gridSize) / Math.pow(Factorial(gridSize),2);
 }
-
 
 assert.equal(Factorial(1),1);
 assert.equal(Factorial(2),2);
@@ -31,5 +27,6 @@ assert.equal(FindLatticePathCount(2),6);
 assert.equal(FindLatticePathCount(3),20);
 assert.equal(FindLatticePathCount(4),70);
 
-
+console.time('script');
 console.log(FindLatticePathCount(20));
+console.timeEnd('script')
